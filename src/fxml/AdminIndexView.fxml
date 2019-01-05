@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="757.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AdminIndexControl">
+   <children>
+      <TabPane layoutX="2.0" layoutY="40.0" prefHeight="706.0" prefWidth="1017.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="商品管理">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="624.0" prefWidth="818.0">
+                     <children>
+                        <TableView fx:id="goodTable" layoutX="14.0" layoutY="14.0" prefHeight="650.0" prefWidth="900.0">
+                          <columns>
+                            <TableColumn fx:id="idCol" prefWidth="75.0" text="商品ID" />
+                            <TableColumn fx:id="nameCol" prefWidth="75.0" text="商品名称" />
+                              <TableColumn fx:id="priceCol" prefWidth="75.0" text="商品价格" />
+                              <TableColumn fx:id="weightCol" prefWidth="75.0" text="重量" />
+                              <TableColumn fx:id="componentCol" prefWidth="75.0" text="成分" />
+                              <TableColumn fx:id="sourceCol" prefWidth="75.0" text="来源" />
+                              <TableColumn fx:id="applyCol" prefWidth="75.0" text="应用" />
+                              <TableColumn fx:id="typeCol" prefWidth="75.0" text="类型" />
+                              <TableColumn fx:id="praiseCol" prefWidth="75.0" text="好评" />
+                              <TableColumn fx:id="commonlyCol" prefWidth="75.0" text="中评" />
+                              <TableColumn fx:id="negativecommentCol" prefWidth="75.0" text="差评" />
+                              <TableColumn fx:id="numCol" prefWidth="75.0" text="库存" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="findBt" layoutX="923.0" layoutY="14.0" mnemonicParsing="false" onAction="#find" text="搜索商品" />
+                        <Button fx:id="addGBt" layoutX="923.0" layoutY="74.0" mnemonicParsing="false" onAction="#showAddDialog" text="增加商品" />
+                        <Button fx:id="addBt" layoutX="923.0" layoutY="129.0" mnemonicParsing="false" onAction="#addNum" prefHeight="30.0" prefWidth="80.0" text="增加库存" />
+                        <Button fx:id="delBt" layoutX="923.0" layoutY="184.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="80.0" text="删除商品" />
+                        <Button fx:id="updateBt" layoutX="923.0" layoutY="234.0" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="80.0" text="修改商品" />
+                        <Button fx:id="flushBt" layoutX="923.0" layoutY="283.0" mnemonicParsing="false" onAction="#flushGoodsTable" prefHeight="30.0" prefWidth="80.0" text="刷新" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="labelText" layoutX="14.0" layoutY="14.0" text="XXX，欢迎您" />
+      <Label fx:id="logoutLabel" layoutX="949.0" layoutY="14.0" onMousePressed="#logout" text="退出登陆" textFill="#0d81da" />
+   </children>
+</AnchorPane>

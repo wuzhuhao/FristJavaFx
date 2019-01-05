@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LoginControl">
+   <children>
+      <TextField fx:id="idText" layoutX="231.0" layoutY="132.0" />
+      <Label layoutX="167.0" layoutY="137.0" text="账号：" />
+      <Label layoutX="167.0" layoutY="173.0" text="密码：" />
+      <Button fx:id="loginButton" layoutX="201.0" layoutY="253.0" mnemonicParsing="false" onAction="#login" text="登陆" />
+      <Button fx:id="registerButton" layoutX="349.0" layoutY="253.0" mnemonicParsing="false" onAction="#showRegisterView" text="注册" />
+      <PasswordField fx:id="pwText" layoutX="231.0" layoutY="168.0" />
+      <RadioButton fx:id="userBt" layoutX="212.0" layoutY="214.0" mnemonicParsing="false" onAction="#SingleElection" text="用户" />
+      <RadioButton fx:id="adminBt" layoutX="332.0" layoutY="214.0" mnemonicParsing="false" onAction="#SingleElection" text="管理员" />
+   </children>
+</AnchorPane>

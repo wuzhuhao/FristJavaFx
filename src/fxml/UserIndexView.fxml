@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="757.0" prefWidth="1023.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="control.UserIndexControl">
+   <children>
+      <TabPane layoutX="2.0" layoutY="40.0" prefHeight="706.0" prefWidth="1017.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="商品列表">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="624.0" prefWidth="818.0">
+                     <children>
+                        <TableView fx:id="goodTable" layoutX="14.0" layoutY="14.0" prefHeight="650.0" prefWidth="900.0">
+                          <columns>
+                            <TableColumn fx:id="idCol" prefWidth="75.0" text="商品ID" />
+                            <TableColumn fx:id="nameCol" prefWidth="75.0" text="商品名称" />
+                              <TableColumn fx:id="priceCol" prefWidth="75.0" text="商品价格" />
+                              <TableColumn fx:id="weightCol" prefWidth="75.0" text="重量" />
+                              <TableColumn fx:id="componentCol" prefWidth="75.0" text="成分" />
+                              <TableColumn fx:id="sourceCol" prefWidth="75.0" text="来源" />
+                              <TableColumn fx:id="applyCol" prefWidth="75.0" text="应用" />
+                              <TableColumn fx:id="typeCol" prefWidth="75.0" text="类型" />
+                              <TableColumn fx:id="praiseCol" prefWidth="75.0" text="好评" />
+                              <TableColumn fx:id="commonlyCol" prefWidth="75.0" text="中评" />
+                              <TableColumn fx:id="negativecommentCol" prefWidth="75.0" text="差评" />
+                              <TableColumn fx:id="numCol" prefWidth="75.0" text="库存" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="findBt" layoutX="923.0" layoutY="14.0" mnemonicParsing="false" onAction="#find" text="搜索商品" />
+                        <Button fx:id="buyBt" layoutX="923.0" layoutY="74.0" mnemonicParsing="false" onAction="#buy" text="购买商品" />
+                        <Button fx:id="flushBt" layoutX="923.0" layoutY="132.0" mnemonicParsing="false" onAction="#flushGoodsTable" prefHeight="30.0" prefWidth="80.0" text="刷新" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="订单">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="OrderTable" layoutX="14.0" layoutY="14.0" prefHeight="608.0" prefWidth="893.0">
+                          <columns>
+                            <TableColumn prefWidth="144.0" text="订单ID" />
+                            <TableColumn minWidth="0.0" prefWidth="124.0" text="商品ID" />
+                              <TableColumn prefWidth="138.0" text="商品名称" />
+                              <TableColumn prefWidth="159.0" text="商品数量" />
+                              <TableColumn prefWidth="165.0" text="订单总价" />
+                              <TableColumn prefWidth="174.0" text="订单状态" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="flushOBt" layoutX="923.0" layoutY="126.0" mnemonicParsing="false" onAction="#flushOrderTable" prefHeight="30.0" prefWidth="80.0" text="刷新" />
+                        <Button fx:id="comBt" layoutX="923.0" layoutY="66.0" mnemonicParsing="false" onAction="#evaluate" prefHeight="30.0" prefWidth="80.0" text="评价" />
+                        <Button fx:id="findOBt" layoutX="923.0" layoutY="14.0" mnemonicParsing="false" onAction="#findOrder" text="搜索商品" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="labelText" layoutX="14.0" layoutY="14.0" text="XXX，欢迎您" />
+      <Label fx:id="logoutLabel" layoutX="949.0" layoutY="14.0" onMousePressed="#logout" text="退出登陆" textFill="#0d81da" />
+   </children>
+</AnchorPane>
